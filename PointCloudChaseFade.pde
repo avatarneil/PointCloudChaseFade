@@ -24,6 +24,7 @@ void setup() {
   size(800, 600, P3D);
   kinect = new Kinect(this);
   kinect.initDepth();
+  kinect.enableMirror(true);
   balls = new ArrayList<Ball>();
   counter=0;
   i = 0;
@@ -41,7 +42,7 @@ void draw() {
   int[] depth = kinect.getRawDepth();
 
   // We're just going to calculate and draw every 4th pixel (equivalent of 160x120)
-  int skip = 10;
+  int skip = 20;
 
   // Translate and rotate
   translate(width/2, height/2, -50);
