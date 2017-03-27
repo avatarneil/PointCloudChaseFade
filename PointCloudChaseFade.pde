@@ -35,7 +35,7 @@ void setup() {
 
 void draw() {
 
-  background(0);
+  background(255);
 
   // Get the raw depth as array of integers
   int[] depth = kinect.getRawDepth();
